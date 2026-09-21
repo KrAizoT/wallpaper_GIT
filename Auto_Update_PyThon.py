@@ -1,5 +1,5 @@
 # Name: KrAizoT
-# Create: 09/21/26
+# Create: 02/19/26
 # Modify: 09/21/26
 # Com: This Auto Update Git File for repo https://github.com/KrAizoT/Wallpaper142
 
@@ -11,7 +11,18 @@ from datetime import datetime
 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 subprocess.run(["git", "add", "."], check=True)
-subprocess.run(["git", "commit", "-m", f"Auto Update SQL {timestamp}"], check=True)
-subprocess.run(["git", "push"], check=True)
+
+# Check whether anything is staged
+status = subprocess.run(
+    ["git", "status", "--porcelain"],
+    capture_output=True, text=True, check=True
+)
+
+if status.stdout.strip():
+    subprocess.run(["git", "commit", "-m", f"Auto Update SQL {timestamp}"], check=True)
+    subprocess.run(["git", "push"], check=True)
+    print("Changes committed and pushed.")
+else:
+    print("Nothing to commit.")
 
 # --- CODE END ---
