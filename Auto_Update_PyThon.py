@@ -1,7 +1,7 @@
 # Name: KrAizoT
 # Create: 02/19/26
 # Modify: 09/21/26
-# Com: This Auto Update Git File for repo https://github.com/KrAizoT/Wallpaper142
+# Com: This Auto Update Git File for repo https://github.com/KrAizoT/wallpaper_GIT
 
 # --- CODE START ---
 
@@ -19,7 +19,7 @@ status = subprocess.run(
 )
 
 if status.stdout.strip():
-    subprocess.run(["git", "commit", "-m", f"Auto Update SQL {timestamp}"], check=True)
+    subprocess.run(["git", "commit", "-m", f"autoupdate {timestamp}"], check=True)
     subprocess.run(["git", "push"], check=True)
     print("Changes committed and pushed.")
 else:
