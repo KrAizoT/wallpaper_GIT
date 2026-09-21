@@ -1,7 +1,7 @@
 # Name: KrAizoT
 # Create: 02/19/26
 # Modify: 09/21/26
-# Com: This Auto Update Git File for repo https://github.com/KrAizoT/wallpaper_GIT
+# Com: Auto Update - Git File for repo https://github.com/KrAizoT/wallpaper_GIT
 
 # --- CODE START ---
 
